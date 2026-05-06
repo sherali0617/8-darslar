@@ -1,59 +1,89 @@
 import os
 os.system("cls")
 
-# try:
-#     a=int(input("Son:"))
-#     b=int(input("Son:"))
+#1.m 
+import datetime
 
-#     print(a/b)
-# except ValueError:
-#     print("Xato !! Son kiriting iltimos")
-# except ZeroDivisionError:
-#     print("Xatooo 0ga bolish mumkin emas")
+# hozirgivaqt=datetime.datetime.now()
+# print(hozirgivaqt)
+
+
+# 2.m
+# yil=int(input("Yil- "))
+# oy=int(input("oy- "))
+# kun=int(input("kun- "))
+# if yil>0 and oy>0 and kun>0 and yil<=2026 and oy<14 and kun<32:
+#     tugilganyili=datetime.date(yil,oy,kun)
+#     hozirgivaqt=datetime.date.today()
+#     qancha_kun_korgan=hozirgivaqt-tugilganyili
+#     print(qancha_kun_korgan.days)
 # else:
-#     print("Dastur bajarildi!!")
-# finally:
-#     print("try exept tugadi")
+#     print("Iltimos to'g'ri kunlarni kiriting")
 
 
-# import math
+# 3.m
+# def vaqt(a):
+#     bayram=datetime.date(2026,9,1)
+#     bugun=datetime.date.today()
+#     print(bayram-bugun)
+#     print(a)
 
-# print(math.pow(5, 3))
-
-# print(math.sqrt(25))
-
-# print(math.log2(16))
-# print(math.log(625, 5))
-
-# print(math.floor(2.95))
-# print(math.ceil(4.01))
-# print(round(2.95), round(4.51))
+# vaqt("Bayramga oz qoldi")
 
 
-# import random as rd
+# 4.m
+# A=[
+#     [1,2],
+#     [3,4]
+# ]
+# B=[
+#     [5,6],
+#     [7,8]
+# ]
+# C=[
+#     [0,0],
+#     [0,0]
+# ]
+# for i in range(len(A)):
+#     C[i]=[A[i][0]+B[i][0],A[i][1]+B[i][1]]
 
-# n = rd.randint(1,100)
-# print(n)
-
-# # m = rd.uniform(1, 10)
-# # print(m)
-
-# names = ['Samandar', 'Sherali', 'Doston', 'Begzod', 'Suhrob']
-# print(rd.choice(names))
-# print(rd.choices(names, k=2))
-# print(rd.sample(names, k=2))
-
-# rd.shuffle(names)
-# print(names)
+# print(C)
 
 
-# os.mkdir("Salom")
-os.rmdir("Salom")
+# 5.m
+# from translate import Translator
+# tarjimon=Translator(to_lang="en",from_lang="uz")
+# list1=["Salom", "dastur", "yordam",  "kitob"]
+# dict1={}
+# for soz in list1:
+    
+#     dict1[soz]=tarjimon.translate(soz)
 
-os.remove("1.c")
+# for i,j in dict1.items():
+#     print(f"{i}:{j}")
 
-# qayta nomlash 1-fayl nomi keyn yangi nom
-os.rename("","") 
+
+# 6.m
+filmlar = {
+    "Titanic": "Jack Dawson",
+    "Harry Potter": "Harry Potter",
+    "The Dark Knight": "Bruce Wayne (Batman)",
+    "The Matrix": "Neo (Thomas Anderson)",
+    "Forrest Gump": "Forrest Gump",
+    "Gladiator": "Maximus Decimus Meridius",
+    "Inception": "Dom Cobb",
+    "Spider-Man": "Peter Parker",
+    "Iron Man": "Tony Stark",
+    "The Lord of the Rings": "Frodo Baggins"
+}
+
+try:
+    f_nomi=input("")
+    for kino,aktyor in filmlar.items():
+        if f_nomi==kino:
+            print(aktyor)
+except KeyError:
+    print("Bunday film yo'q!")
 
 
 
